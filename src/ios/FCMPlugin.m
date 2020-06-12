@@ -183,4 +183,15 @@ static FCMPlugin *fcmPluginInstance;
     appInForeground = YES;
 }
 
+- (void)deleteInstanceId:(CDVInvokedUrlCommand *)command {
+    [[FIRInstanceID instanceID] deleteIDWithHandler:^void(NSError *_Nullable error) {
+        if (error) {
+            NSLog(@"Unable to delete instance");
+        } else {
+            CDVPluginResult *pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+            [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+        }
+    }];
+}
+
 @end

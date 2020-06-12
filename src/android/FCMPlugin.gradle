@@ -1,6 +1,6 @@
 def PLUGIN_CONFIG = new Object()
 try {
-    PLUGIN_CONFIG = new groovy.json.JsonSlurper().parseText(file("${projectDir}/../../../package.json").text).cordova.plugins['cordova-plugin-fcm-with-dependecy-updated']
+    PLUGIN_CONFIG = new groovy.json.JsonSlurper().parseText(file("${projectDir}/../../../package.json").text).cordova.plugins['hrs-cordova-plugin-fcm-with-dependecy-updated']
 } catch(Exception e) {}
 def FCM_VERSION = System.getenv('FCM_VERSION') ?: rootProject.hasProperty('FCM_VERSION') ? rootProject.ext.FCM_VERSION : PLUGIN_CONFIG.hasProperty("FCM_VERSION") ? PLUGIN_CONFIG.FCM_VERSION : null ?: '19.0.0'
 
@@ -8,7 +8,7 @@ buildscript {
     ext {
         def PLUGIN_CONFIG = new Object()
         try {
-            PLUGIN_CONFIG = new groovy.json.JsonSlurper().parseText(file("${projectDir}/../../../package.json").text).cordova.plugins['cordova-plugin-fcm-with-dependecy-updated']
+            PLUGIN_CONFIG = new groovy.json.JsonSlurper().parseText(file("${projectDir}/../../../package.json").text).cordova.plugins['hrs-cordova-plugin-fcm-with-dependecy-updated']
         } catch(Exception e) {
             def WARNING_STYLE = "${(char)27}[33;49"+"m"
             def DEFAULT_STYLE = "${(char)27}[39;49"+"m"

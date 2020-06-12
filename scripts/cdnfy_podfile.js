@@ -7,7 +7,7 @@ var fs = require('fs');
 
 var IOS_PLATFORM_PATH = 'platforms/ios';
 var PODFILE_PATH = 'platforms/ios/Podfile';
-var PLUGIN_DEFINITION_PATH = 'plugins/cordova-plugin-fcm-with-dependecy-updated/plugin.xml';
+var PLUGIN_DEFINITION_PATH = 'plugins/hrs-cordova-plugin-fcm-with-dependecy-updated/plugin.xml';
 
 function isSupportedByCocoapods(callback) {
     // Verifies if installed version of cocoapods supports the cdn repo

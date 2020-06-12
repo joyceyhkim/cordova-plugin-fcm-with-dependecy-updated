@@ -3,6 +3,11 @@ package com.gae.scaffolder.plugin;
 import android.app.NotificationManager;
 import android.content.Context;
 import android.util.Log;
+import android.app.NotificationManager;
+import android.app.NotificationChannel;
+import android.content.Context;
+import static android.os.Build.VERSION.SDK_INT;
+import static android.os.Build.VERSION_CODES.O;
 
 import com.gae.scaffolder.plugin.interfaces.OnFinishedListener;
 import com.gae.scaffolder.plugin.interfaces.TokenListeners;
@@ -91,6 +96,20 @@ public class FCMPlugin extends CordovaPlugin {
                 cordova.getActivity().runOnUiThread(new Runnable() {
                     public void run() {
                         getToken(callbackContext);
+                    }
+                });
+            }
+            // DELETE INSTANCE ID //
+            else if (action.equals("deleteInstanceId")) {
+                cordova.getThreadPool().execute(new Runnable() {
+
+                    public void run() {
+                        try {
+                            FirebaseInstanceId.getInstance().deleteInstanceId();
+                            callbackContext.success();
+                        } catch (Exception e) {
+                            callbackContext.error(e.getMessage());
+                        }
                     }
                 });
             }

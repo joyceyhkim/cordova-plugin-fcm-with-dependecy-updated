@@ -95,6 +95,11 @@ FCMPlugin.prototype.onTokenRefreshReceived = function (token) {
   console.log(token);
 };
 
+// DELETE INSTANCE ID //
+FCMPlugin.prototype.deleteInstanceId = function (success, error) {
+  exec(success, error, "FCMPlugin", "deleteInstanceId", []);
+}
+
 // FIRE READY //
 exec(
   function (result) {
