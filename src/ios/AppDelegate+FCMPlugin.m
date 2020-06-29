@@ -190,7 +190,7 @@ fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
 - (void)messaging:(nonnull FIRMessaging *)messaging didReceiveRegistrationToken:(nonnull NSString *)deviceToken {
     NSLog(@"Device FCM Token: %@", deviceToken);
     // Notify about received token.
-    NSDictionary *dataDict = [NSDictionary dictionaryWithObject:deviceToken forKey:@"token"];
+    NSDictionary *dataDict = [NSDictionary dictionaryWithObjectsAndKeys: @"deviceToken", @"token", nil];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"FCMToken" object:nil userInfo:dataDict];
     fcmToken = deviceToken;
     [FCMPlugin.fcmPlugin notifyFCMTokenRefresh:deviceToken];
