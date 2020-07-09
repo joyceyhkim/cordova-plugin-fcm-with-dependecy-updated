@@ -1,4 +1,4 @@
-export interface INotificationPayload {
+interface INotificationPayload {
   wasTapped: boolean;
   notification?: {
     title?: string;
@@ -13,7 +13,7 @@ export interface INotificationPayload {
   [others: string]: any;
 }
 
-export interface IChannelConfiguration {
+interface IChannelConfiguration {
   id: string;
   name: string;
   description?: string;
@@ -24,14 +24,14 @@ export interface IChannelConfiguration {
   vibration?: boolean;
 }
 
-export interface RequestPushPermissionIOSOptions {
+interface RequestPushPermissionIOSOptions {
   ios9Support: {
     timeout: number; // Defaults to 10
     interval: number; // Defaults to 0.3
   };
 }
 
-export interface FCMPlugin {
+interface FCMPlugin {
   hasPermission(
     onSuccess: (doesIt: boolean | null) => void,
     onError?: (error: Error) => void
@@ -87,3 +87,6 @@ export interface FCMPlugin {
     onError?: (error: Error) => void
   ): void;
 }
+
+/** Declare instance */
+export var FCMPlugin: FCMPlugin;
