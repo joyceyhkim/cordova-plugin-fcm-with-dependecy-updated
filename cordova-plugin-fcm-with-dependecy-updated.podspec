@@ -15,7 +15,7 @@ Pod::Spec.new do |spec|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  spec.name         = "hrs-cordova-plugin-fcm-with-dependecy-updated"
+  spec.name         = "hrs-test-cordova-plugin-fcm-with-dependecy-updated"
   spec.version      = "7.6.0"
   spec.summary      = "Google FCM Push Notifications Cordova Plugin"
 
