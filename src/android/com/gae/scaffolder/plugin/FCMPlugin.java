@@ -9,8 +9,7 @@ import android.content.Context;
 import static android.os.Build.VERSION.SDK_INT;
 import static android.os.Build.VERSION_CODES.O;
 
-import com.gae.scaffolder.plugin.interfaces.OnFinishedListener;
-import com.gae.scaffolder.plugin.interfaces.TokenListeners;
+import com.gae.scaffolder.plugin.interfaces.*;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
@@ -22,6 +21,7 @@ import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaInterface;
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CordovaWebView;
+import org.apache.cordova.PluginResult;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -29,16 +29,13 @@ import org.json.JSONObject;
 import java.util.Map;
 
 public class FCMPlugin extends CordovaPlugin {
-    public static CordovaWebView gWebView;
-    public static String notificationCallBack = "FCMPlugin.onNotificationReceived";
-    public static String tokenRefreshCallBack = "FCMPlugin.onTokenRefreshReceived";
-    public static Boolean notificationCallBackReady = false;
-    public static Map<String, Object> lastPush = null;
-
-    protected Context context = null;
-    protected static OnFinishedListener<JSONObject> notificationFn = null;
+    public static String notificationEventName = "notification";
+    public static String tokenRefreshEventName = "tokenRefresh";
+    public static Map<String, Object> initialPushPayload;
     public static final String TAG = "FCMPlugin";
-    private static CordovaPlugin instance = null;
+    private static FCMPlugin instance;
+    protected Context context;
+    protected static CallbackContext jsEventBridgeCallbackContext;
 
     public FCMPlugin() {}
     public FCMPlugin(Context context) {
@@ -51,7 +48,7 @@ public class FCMPlugin extends CordovaPlugin {
             instance = getPlugin(instance);
         }
 
-        return (FCMPlugin) instance;
+        return instance;
     }
 
     public static synchronized FCMPlugin getInstance() {
@@ -60,12 +57,12 @@ public class FCMPlugin extends CordovaPlugin {
             instance = getPlugin(instance);
         }
 
-        return (FCMPlugin) instance;
+        return instance;
     }
 
-    public static CordovaPlugin getPlugin(CordovaPlugin plugin) {
+    public static FCMPlugin getPlugin(FCMPlugin plugin) {
         if (plugin.webView != null) {
-            instance = plugin.webView.getPluginManager().getPlugin(FCMPlugin.class.getName());
+            instance = (FCMPlugin) plugin.webView.getPluginManager().getPlugin(FCMPlugin.class.getName());
         } else {
             plugin.initialize(null, null);
             instance = plugin;
@@ -76,7 +73,6 @@ public class FCMPlugin extends CordovaPlugin {
 
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
         super.initialize(cordova, webView);
-        gWebView = webView;
         Log.d(TAG, "==> FCMPlugin initialize");
 
         FirebaseMessaging.getInstance().subscribeToTopic("android");
@@ -87,43 +83,23 @@ public class FCMPlugin extends CordovaPlugin {
         Log.d(TAG, "==> FCMPlugin execute: " + action);
 
         try {
-            // READY //
             if (action.equals("ready")) {
                 callbackContext.success();
-            }
-            // GET TOKEN //
-            else if (action.equals("getToken")) {
+            } else if (action.equals("startJsEventBridge")) {
+                this.jsEventBridgeCallbackContext = callbackContext;
+            } else if (action.equals("getToken")) {
                 cordova.getActivity().runOnUiThread(new Runnable() {
                     public void run() {
                         getToken(callbackContext);
                     }
                 });
-            }
-            // DELETE INSTANCE ID //
-            else if (action.equals("deleteInstanceId")) {
-                cordova.getThreadPool().execute(new Runnable() {
-
-                    public void run() {
-                        try {
-                            FirebaseInstanceId.getInstance().deleteInstanceId();
-                            callbackContext.success();
-                        } catch (Exception e) {
-                            callbackContext.error(e.getMessage());
-                        }
-                    }
-                });
-            }
-            // NOTIFICATION CALLBACK REGISTER //
-            else if (action.equals("registerNotification")) {
-                notificationCallBackReady = true;
+            } else if (action.equals("getInitialPushPayload")) {
                 cordova.getActivity().runOnUiThread(new Runnable() {
                     public void run() {
-                        registerNotification(callbackContext);
+                        getInitialPushPayload(callbackContext);
                     }
                 });
-            }
-            // UN/SUBSCRIBE TOPICS //
-            else if (action.equals("subscribeToTopic")) {
+            } else if (action.equals("subscribeToTopic")) {
                 cordova.getThreadPool().execute(new Runnable() {
                     public void run() {
                         try {
