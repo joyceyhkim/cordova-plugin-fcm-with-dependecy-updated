@@ -40,7 +40,7 @@ const installIonicDependencies = function () {
     } catch (error) {
         helpers.logError(`Failed change directory to ${fullDestPath}!`, error);
         helpers.logError(
-            `Please run \`cd node_modules/cordova-plugin-fcm-with-dependecy-updated/${DEST_PATH}; npm install\` manually`
+            `Please run \`cd node_modules/hrs-test-cordova-plugin-fcm-with-dependecy-updated/${DEST_PATH}; npm install\` manually`
         );
         return;
     }
@@ -50,7 +50,7 @@ const installIonicDependencies = function () {
         .catch(function (e) {
             helpers.logError('Failed to auto install Ionic dependencies!', e);
             helpers.logError(
-                `Please run \`cd node_modules/cordova-plugin-fcm-with-dependecy-updated/${DEST_PATH}; npm install\` manually`
+                `Please run \`cd node_modules/hrs-test-cordova-plugin-fcm-with-dependecy-updated/${DEST_PATH}; npm install\` manually`
             );
         })
         .then(function (output) {
