@@ -15,8 +15,8 @@ Pod::Spec.new do |spec|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  spec.name         = "hrs-cordova-plugin-fcm-with-dependecy-updated"
-  spec.version      = "6.4.3"
+  spec.name         = "hrs-test-cordova-plugin-fcm-with-dependecy-updated"
+  spec.version      = "7.6.0"
   spec.summary      = "Google FCM Push Notifications Cordova Plugin"
 
   # This description is used to generate tags and improve search results.
@@ -28,7 +28,7 @@ Pod::Spec.new do |spec|
   Extremely easy plug&play push notification plugin for Cordova applications with Google Firebase FCM.
 DESC
 
-  spec.homepage     = "https://github.com/joyceyhkim/cordova-plugin-fcm-with-dependecy-updated"
+  spec.homepage     = "https://github.com/ScottWaring/cordova-plugin-fcm-with-dependecy-updated"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -79,7 +79,7 @@ DESC
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/joyceyhkim/cordova-plugin-fcm-with-dependecy-updated.git", :tag => "v#{spec.version}" }
+  spec.source       = { :git => "https://github.com/ScottWaring/cordova-plugin-fcm-with-dependecy-updated.git", :tag => "v#{spec.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -104,7 +104,7 @@ DESC
   #  You can preserve files from being cleaned, please don't preserve
   #  non-essential files like tests, examples and documentation.
   #
-  
+
   # Reference: https://stackoverflow.com/questions/36797639/including-a-plist-file-with-my-cocoapod
   spec.resource_bundle  = {"GoogleService" => "src/ios/Assets/*" }
   # spec.resource  = "icon.png"
