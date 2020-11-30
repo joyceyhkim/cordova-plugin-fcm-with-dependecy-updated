@@ -1,129 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f117752c-919e-4d48-83e9-00081e840bcb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.github/FUNDING.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.github/ISSUE_TEMPLATE/bug_report.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ionic/FCM.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ionic/FCM.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ionic/ngx/FCM.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ionic/ngx/FCM.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ionic/ngx/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ionic/ngx/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ionic/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ionic/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ionic/v4/FCM.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ionic/v4/FCM.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ionic/v4/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ionic/v4/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/install_ionic_dependencies.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/install_ionic_dependencies.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ionic/FCM.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ionic/ngx/FCM.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ionic/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ionic/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ionic/package.toCopy.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ionic/scripts/build.dts.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ionic/scripts/build.js.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ionic/scripts/replaceCopyFromOnFile.helper.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ionic/scripts/retriveJSDocFromFileClass.helper.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ionic/scripts/retriveJSDocFromFileClassMethod.helper.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ionic/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ionic/v4/FCM.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ios/FCMNotificationCenterDelegate.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ios/FCMNotificationCenterDelegate.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/www/FCMPlugin.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/www/IChannelConfiguration.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/www/IDisposable.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/www/INotificationPayload.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/www/IRequestPushPermissionOptions.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/www/bridgeNativeEvents.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/www/eventAsDisposable.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/www/execAsPromise.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/www/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/www/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/www/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/www/rollup.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/www/scripts/build.dts.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/www/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tslint.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/typings/FCMPlugin.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/typings/IChannelConfiguration.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/typings/IDisposable.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/typings/INotificationPayload.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/typings/IRequestPushPermissionOptions.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/typings/bridgeNativeEvents.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/typings/eventAsDisposable.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/typings/execAsPromise.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/typings/index.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.prettierrc" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/proguard-rules.pro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/androidTest/java/com/gae/scaffolder/plugin/ExampleInstrumentedTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/java/com/gae/scaffolder/plugin/MainActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/java/com/gae/scaffolder/plugin/NotificationModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/values/colors.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/values/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/values/styles.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/test/java/com/gae/scaffolder/plugin/ExampleUnitTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/test/java/com/gae/scaffolder/plugin/FCMPluginTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/gradle.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/lib/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/lib/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/lib/proguard-rules.pro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/lib/src/androidTest/java/com/gae/scaffolder/plugin/lib/ExampleInstrumentedTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/lib/src/main/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/lib/src/main/res/values/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova-plugin-fcm-with-dependecy-updated.podspec" beforeDir="false" afterPath="$PROJECT_DIR$/cordova-plugin-fcm-with-dependecy-updated.podspec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/plugin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/cdnfy_podfile.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/helpers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FCMPlugin.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/android/FCMPlugin.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/src/android/FCMPlugin.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/android/com/gae/scaffolder/plugin/FCMPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/android/com/gae/scaffolder/plugin/FCMPlugin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/android/com/gae/scaffolder/plugin/FCMPluginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/android/com/gae/scaffolder/plugin/FCMPluginActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/android/com/gae/scaffolder/plugin/MyFirebaseMessagingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/android/com/gae/scaffolder/plugin/MyFirebaseMessagingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ios/AppDelegate+FCMPlugin.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/ios/AppDelegate+FCMPlugin.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ios/AppDelegate+FCMPlugin.m" beforeDir="false" afterPath="$PROJECT_DIR$/src/ios/AppDelegate+FCMPlugin.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ios/FCMPlugin.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/ios/FCMPlugin.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ios/FCMPlugin.m" beforeDir="false" afterPath="$PROJECT_DIR$/src/ios/FCMPlugin.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ios/FCMPluginIOS9Support.m" beforeDir="false" afterPath="$PROJECT_DIR$/src/ios/FCMPluginIOS9Support.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/FCMPlugin.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/FCMPlugin.js" afterDir="false" />
-    </list>
+    <list default="true" id="f117752c-919e-4d48-83e9-00081e840bcb" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -158,7 +36,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1606762580335</updated>
-      <workItem from="1606762581520" duration="560000" />
+      <workItem from="1606762581520" duration="968000" />
     </task>
     <servers />
   </component>

@@ -2,7 +2,7 @@ buildscript {
     ext {
         def PLUGIN_CONFIG = new Object()
         try {
-            PLUGIN_CONFIG = new groovy.json.JsonSlurper().parseText(file("${projectDir}/../../../package.json").text).cordova.plugins['hrs-cordova-plugin-fcm-with-dependecy-updated']
+            PLUGIN_CONFIG = new groovy.json.JsonSlurper().parseText(file("${projectDir}/../../../package.json").text).cordova.plugins['hrs-test-cordova-plugin-fcm-with-dependecy-updated']
         } catch(Exception e) {
             def WARNING_STYLE = "${(char)27}[33;49"+"m"
             def DEFAULT_STYLE = "${(char)27}[39;49"+"m"
@@ -26,7 +26,7 @@ buildscript {
         def PLUGIN_CONFIG = new Object()
         try {
             // Load configuration from install variables (package.json)
-            PLUGIN_CONFIG = new groovy.json.JsonSlurper().parseText(file("${projectDir}/../../../package.json").text).cordova.plugins['cordova-plugin-fcm-with-dependecy-updated']
+            PLUGIN_CONFIG = new groovy.json.JsonSlurper().parseText(file("${projectDir}/../../../package.json").text).cordova.plugins['hrs-test-cordova-plugin-fcm-with-dependecy-updated']
         } catch(Exception e) {
             def WARNING_STYLE = "${(char)27}[33;49"+"m"
             def DEFAULT_STYLE = "${(char)27}[39;49"+"m"
@@ -54,7 +54,7 @@ dependencies {
     def PLUGIN_CONFIG = new Object()
     try {
         // Load configuration from install variables (package.json)
-        PLUGIN_CONFIG = new groovy.json.JsonSlurper().parseText(file("${projectDir}/../../../package.json").text).cordova.plugins['cordova-plugin-fcm-with-dependecy-updated']
+        PLUGIN_CONFIG = new groovy.json.JsonSlurper().parseText(file("${projectDir}/../../../package.json").text).cordova.plugins['hrs-test-cordova-plugin-fcm-with-dependecy-updated']
     } catch(Exception e) {
         def WARNING_STYLE = "${(char)27}[33;49"+"m"
         def DEFAULT_STYLE = "${(char)27}[39;49"+"m"
