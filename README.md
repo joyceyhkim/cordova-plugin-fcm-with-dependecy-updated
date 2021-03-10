@@ -11,6 +11,11 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/andrehtissot/cordova-plugin-fcm-with-dependecy-updated/badge.svg?targetFile=package.json)](https://snyk.io/test/github/andrehtissot/cordova-plugin-fcm-with-dependecy-updated?targetFile=package.json)
 [![DeepScan grade](https://deepscan.io/api/teams/3417/projects/5068/branches/39495/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=3417&pid=5068&bid=39495)
 
+### Version 6.4.4 (10/03/2020)
+
+Add support for initializing FirebaseApp with provided Project Id, App Id, and API Key.
+Using the `FCMPlugin.initDifferentAccount` method will delete the current FirebaseApp, if one exists, and initialize a new Firebase App. 
+
 ### Optional FCM Image Support for Cordova iOS
 
 After a lot of work, the first release of the plugin https://github.com/andrehtissot/cordova-plugin-fcm-image-support is out. Which should enable the support, just by installing it.

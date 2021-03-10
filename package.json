@@ -1,5 +1,5 @@
 {
-  "version": "6.4.3",
+  "version": "6.4.4",
   "name": "hrs-cordova-plugin-fcm-with-dependecy-updated",
   "cordova_name": "HRS Cordova FCM Push Plugin",
   "description": "Google Firebase Cloud Messaging Cordova Push Plugin fork with dependecy updated",

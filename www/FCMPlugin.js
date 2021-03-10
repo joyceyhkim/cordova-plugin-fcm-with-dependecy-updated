@@ -100,6 +100,11 @@ FCMPlugin.prototype.deleteInstanceId = function (success, error) {
   exec(success, error, "FCMPlugin", "deleteInstanceId", []);
 }
 
+// INITIALIZE A DIFFERENT FIREBASE ACCOUNT //
+FCMPlugin.prototype.initDifferentAccount = function (accountInfo, success, error) {
+  exec(success, error, "FCMPlugin", "initDifferentAccount", [accountInfo]);
+}
+
 // FIRE READY //
 exec(
   function (result) {

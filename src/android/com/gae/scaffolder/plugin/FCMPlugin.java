@@ -14,6 +14,8 @@ import com.gae.scaffolder.plugin.interfaces.TokenListeners;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.FirebaseOptions;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.InstanceIdResult;
 import com.google.firebase.messaging.FirebaseMessaging;
@@ -78,9 +80,6 @@ public class FCMPlugin extends CordovaPlugin {
         super.initialize(cordova, webView);
         gWebView = webView;
         Log.d(TAG, "==> FCMPlugin initialize");
-
-        FirebaseMessaging.getInstance().subscribeToTopic("android");
-        FirebaseMessaging.getInstance().subscribeToTopic("all");
     }
 
     public boolean execute(final String action, final JSONArray args, final CallbackContext callbackContext) throws JSONException {
@@ -139,6 +138,29 @@ public class FCMPlugin extends CordovaPlugin {
                     public void run() {
                         try {
                             FirebaseMessaging.getInstance().unsubscribeFromTopic(args.getString(0));
+                            callbackContext.success();
+                        } catch (Exception e) {
+                            callbackContext.error(e.getMessage());
+                        }
+                    }
+                });
+            } else if (action.equals("initDifferentAccount")) {
+                cordova.getThreadPool().execute(new Runnable() {
+                    public void run() {
+                        try {
+                            if (!FirebaseApp.getApps(context).isEmpty()) {
+                                FirebaseApp app = FirebaseApp.getInstance("[DEFAULT]");
+                                app.delete();
+                            }
+
+                            Context context = cordova.getActivity();
+                            JSONObject accountInfo = args.getJSONObject(0);
+                            FirebaseOptions options = new FirebaseOptions.Builder()
+                                    .setProjectId(accountInfo.getString("project_id"))
+                                    .setApplicationId(accountInfo.getString("app_id"))
+                                    .setApiKey(accountInfo.getString("api_key"))
+                                    .build();
+                            FirebaseApp.initializeApp(context, options);
                             callbackContext.success();
                         } catch (Exception e) {
                             callbackContext.error(e.getMessage());
